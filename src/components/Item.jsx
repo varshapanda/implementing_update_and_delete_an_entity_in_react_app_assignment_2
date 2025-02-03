@@ -1,8 +1,12 @@
-const Item = ({ item }) => {
+import React from 'react';
 
-    // Render a single item
-    // Add a Delete and Edit button
-    return null;
+const Item = ({ item, onDelete }) => {
+  return (
+    <div>
+      <span>{item.name}</span>
+      <button onClick={() => onDelete(item.id)}>Delete</button>
+    </div>
+  );
 };
 
 export default Item;
